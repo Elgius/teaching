@@ -1,5 +1,6 @@
+"use client";
+
 import React from "react";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
@@ -36,6 +37,7 @@ export default function AdminDashboard() {
             <BookOpen className="w-8 h-8 text-green-600" />
             <span className="ml-2 text-xl font-semibold">EduHub Admin</span>
           </div>
+          {/* Sidebar component */}
           <Sidebar />
         </div>
       </aside>
