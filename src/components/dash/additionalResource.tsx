@@ -1,12 +1,12 @@
 "use client";
 import {
   DropdownMenu,
-  DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuLabel,
-  DropdownMenuSeparator,
   DropdownMenuRadioGroup,
   DropdownMenuRadioItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Link2, Notebook, Link, Trash2, PlusCircle } from "lucide-react";
 import { Input } from "@/components/ui/input";
@@ -23,7 +23,7 @@ import {
 import React from "react";
 
 function AdditionalResource() {
-  const [icons, setIcons] = React.useState("");
+  const [icons, setIcons] = React.useState("Link");
   const [resources, setResources] = React.useState([{ title: "", url: "" }]);
 
   const addResource = () => {
@@ -55,7 +55,7 @@ function AdditionalResource() {
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead>Icon</TableHead>
+              <TableHead>Type</TableHead>
               <TableHead>Title</TableHead>
               <TableHead>URL</TableHead>
               <TableHead className="w-[100px]">Action</TableHead>
@@ -67,12 +67,10 @@ function AdditionalResource() {
                 <TableCell>
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
-                      <Button variant="outline">
-                        <Notebook />
-                      </Button>
+                      <Button variant="outline">{icons}</Button>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent className="w-20 bg-white">
-                      <DropdownMenuLabel>Choose your Icon</DropdownMenuLabel>
+                      <DropdownMenuLabel>Select type</DropdownMenuLabel>
                       <DropdownMenuSeparator />
                       <DropdownMenuRadioGroup
                         value={icons}
