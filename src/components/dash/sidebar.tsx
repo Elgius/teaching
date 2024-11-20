@@ -4,7 +4,7 @@ import {
   BarChart,
   BookOpen,
   DollarSign,
-  Settings,
+  // Settings,
   Users,
   Menu,
   X,
@@ -74,6 +74,7 @@ export default function Sidebar() {
         ${isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"}
       `}
       >
+        {/* TODO:settings will be in a future update */}
         <div className="flex flex-col h-full">
           <div className="flex-1 px-2 mt-5 space-y-1 overflow-y-auto">
             <NavLink href="#" icon={BarChart}>
@@ -88,9 +89,9 @@ export default function Sidebar() {
             <NavLink href="#" icon={DollarSign}>
               Revenue
             </NavLink>
-            <NavLink href="#" icon={Settings}>
+            {/* <NavLink href="#" icon={Settings}>
               Settings
-            </NavLink>
+            </NavLink> */}
           </div>
         </div>
       </nav>

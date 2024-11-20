@@ -22,6 +22,7 @@ import {
   FileText,
   Image,
 } from "lucide-react";
+import { Label } from "../ui/label";
 import AdditionalResource from "@/components/dash/additionalResource";
 export default function CourseCreatorDashboard() {
   const [youtubeLink, setYoutubeLink] = React.useState("");
@@ -67,12 +68,8 @@ export default function CourseCreatorDashboard() {
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <Input
-            placeholder="Enter YouTube video URL"
-            value={youtubeLink}
-            onChange={(e) => setYoutubeLink(e.target.value)}
-            aria-label="YouTube video URL"
-          />
+          <Label htmlFor="picture">Insert your thumbnail image</Label>
+          <Input id="thumbnail image" type="file" />
         </CardContent>
       </Card>
 
